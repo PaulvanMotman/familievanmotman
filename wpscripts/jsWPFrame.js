@@ -1,0 +1,1 @@
+function GetFrameUrl(a){var b=document.getElementById(a);if(b===null){return}var c=window.location.href;if(c.indexOf("?")>0){var d=c.split("?");var e=d[1].split("&");var i,f,g;for(i=0;i<e.length;i++){var f=e[i].split("=");var g=decodeURIComponent(f[1]);if(decodeURIComponent(f[0])==b.id&&b.src!=g){b.src=g;return}}}}

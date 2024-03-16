@@ -1,0 +1,1 @@
+function WPImagePopup(a,b,c,d){var e=window.open("",b,d);e.document.open();e.document.write('<html><head><title>'+a+'</title></head><body style="margin:0;padding:0;"><a href="" onclick="javascript:window.close()"><img src="'+c+'" border="0"><a/></body></html>');e.document.close();e.focus()}
