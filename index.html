@@ -655,8 +655,8 @@ document.write( '<div style="position:absolute;left:20;top:250;width:979;height:
     var span = document.getElementsByClassName("close")[0];
 
     document.querySelectorAll('input[name="deliveryOption"]').forEach(input => {
-        input.addEventListener('change', function() {
-            let shippingPreference = this.value === 'pickup' ? 'NO_SHIPPING' : 'GET_FROM_FILE';
+        input.addEventListener('change', function(event) {
+            let shippingPreference = event.target.value === 'pickup' ? 'NO_SHIPPING' : 'GET_FROM_FILE';
 
             // Ensure PayPal buttons container is empty before re-rendering
             document.getElementById('paypal-button-container').innerHTML = '';
@@ -667,7 +667,7 @@ document.write( '<div style="position:absolute;left:20;top:250;width:979;height:
                     return actions.order.create({
                         purchase_units: [{
                             amount: {
-                                value: this.value === 'pickup' ? '35' : '39.99' // The transaction amount
+                                value: event.target.value === 'pickup' ? '35' : '39.99' // The transaction amount
                             }
                         }],
                         application_context: {
