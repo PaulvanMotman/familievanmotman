@@ -133,6 +133,105 @@ body{margin:0;padding:0;}
     background-color: #388E3C; /* Darker shade for hover effect */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
+
+/* Modal title and radio buttons */
+
+.title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 20px auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.subtext {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.option {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.option:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.option input:checked ~ .checkmark {
+    background-color: #4CAF50;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.option input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.option .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.info-text {
+    margin-left: 35px;
+    font-size: 14px;
+    color: #666;
+}
+
+.info-text strong {
+    color: #333;
+}
 </style>
 <script type="text/javascript" src="wpscripts/jspngfix.js"></script>
 <link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"><script type="text/javascript">
@@ -509,8 +608,37 @@ document.write( '<div style="position:absolute;left:20;top:250;width:979;height:
 
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <div id="paypal-button-container"></div>
+        <span class="close">&times;</span>
+        <div class="title">Kies uw leveringsoptie</div>
+        <div class="subtext">Selecteer een optie die het beste bij u past</div>
+
+        <div class="container">
+
+            <div class="option-container">
+                <label class="option">Zelf ophalen
+                    <input type="radio" name="deliveryOption" value="pickup" id="deliveryOptionPickup">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="info-text">
+                    <strong>Prijs</strong> €35<br>
+                    <strong>Waar</strong> de Kumpulan<br>
+                    <strong>Wanneer</strong> zondag 9 juni
+                </div>
+            </div>
+
+            <div class="option-container">
+                <label class="option">Verzenden
+                    <input type="radio" name="deliveryOption" value="delivery">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="info-text">
+                    <strong>Prijs:</strong> €39,99<br> 
+                    <strong>Beschikbaar vanaf:</strong> zondag 9 juni
+                </div>
+            </div>
+            
+        </div>
+        <div id="paypal-button-container"></div>
     </div>
   
   </div>
@@ -525,47 +653,56 @@ document.write( '<div style="position:absolute;left:20;top:250;width:979;height:
     var modal = document.getElementById("myModal");
     var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("close")[0];
-    var paypalButtonsRendered = false; // Flag to check if PayPal buttons have been rendered
+
+    document.querySelectorAll('input[name="deliveryOption"]').forEach(input => {
+        input.addEventListener('change', function() {
+            let shippingPreference = this.value === 'pickup' ? 'NO_SHIPPING' : 'GET_FROM_FILE';
+
+            // Ensure PayPal buttons container is empty before re-rendering
+            document.getElementById('paypal-button-container').innerHTML = '';
+
+            paypal.Buttons({
+                // fundingSource: paypal.FUNDING.IDEAL,
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: this.value === 'pickup' ? '35' : '39.99' // The transaction amount
+                            }
+                        }],
+                        application_context: {
+                            shipping_preference: shippingPreference,
+                            payment_method: {
+                                payee_preferred: 'IMMEDIATE_PAYMENT_REQUIRED' // Make payment immediately
+                            }
+                        }
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        // Transaction completed
+                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                        // You can also access the shipping details here
+                        // details.purchase_units[0].shipping.address
+                    });
+                },
+                onClick: function(data) {
+                    // Close the modal when any PayPal button is clicked
+                    if (data.fundingSource !== paypal.FUNDING.CARD) {
+                        modal.style.display = "none";
+                    }
+                }
+
+            }).render('#paypal-button-container');
+        });
+    });
 
     // When the user clicks the button, open the modal 
     btn.onclick = function() {
         modal.style.display = "block";
-        if (!paypalButtonsRendered) {
-            paypal.Buttons({
-            // fundingSource: paypal.FUNDING.IDEAL,
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '35' // The transaction amount
-                        }
-                    }],
-                    application_context: {
-                        shipping_preference: 'GET_FROM_FILE', // Prompt buyer to provide a shipping address
-                        payment_method: {
-                            payee_preferred: 'IMMEDIATE_PAYMENT_REQUIRED' // Make payment immediately
-                        }
-                    }
-                });
-            },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    // Transaction completed
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                    // You can also access the shipping details here
-                    // details.purchase_units[0].shipping.address
-                });
-            },
-            onClick: function(data) {
-                // Close the modal when any PayPal button is clicked
-                if (data.fundingSource !== paypal.FUNDING.CARD) {
-                    modal.style.display = "none";
-                }
-            }
-
-        }).render('#paypal-button-container');
-        paypalButtonsRendered = true;
-        }
+        var pickupOption = document.getElementById('deliveryOptionPickup');
+        pickupOption.checked = true;
+        pickupOption.dispatchEvent(new Event('change'));
     }
 
     // When the user clicks on <span> (x), close the modal
@@ -579,6 +716,7 @@ document.write( '<div style="position:absolute;left:20;top:250;width:979;height:
             modal.style.display = "none";
         }
     }
+    
 </script>
 
 </body>
