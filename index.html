@@ -76,6 +76,63 @@ body{margin:0;padding:0;}
 {
     font-family:"Trebuchet MS", sans-serif; color:#000080; font-size:11.0px; line-height:1.45em;
 }
+
+/* Simple styling for the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#myBtn {
+    position: absolute;
+    top: 712px;
+    left: 220px;
+    width: 240px;
+    height: 40px; /* Adjusted for better visibility */
+    margin: 0;
+    padding: 0;
+    background-color: #4CAF50; /* Material Design Purple */
+    color: #FFFFFF; /* White text color */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover */
+    font-size: 16px; /* Adjusted font size for better readability */
+    line-height: 40px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+}
+
+#myBtn:hover {
+    background-color: #388E3C; /* Darker shade for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
 </style>
 <script type="text/javascript" src="wpscripts/jspngfix.js"></script>
 <link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"><script type="text/javascript">
@@ -268,10 +325,12 @@ document.write( '<div style="position:absolute;left:20;top:250;width:979;height:
     <area shape="rect" coords="0,0,121,74" href="http://www.familievanmotman.nl/news0.html" alt="">
     <area shape="rect" coords="0,0,121,74" href="http://www.familievanmotman.nl/news0.html" alt="">
 </map>
+<button id="myBtn">
+    Bestel het boek
+</button>
+
 <img src="wpimages/wp2aab9631_01.png" border="0" width="120" height="73" alt="" onload="OnLoadPngFix()" usemap="#map4" style="position:absolute;left:580px;top:1057px;">
-<form id="site_search_1" action="" onSubmit="return false;" style="position: absolute; top:720px; left:220px; width:240px; height:22px;margin: 0; padding: 0;">
-    <input id="site_search_1_input" name="site_search_1_input" onkeypress="if (event.keyCode==13) window.location.href='search.html?site_search_results_1='+document.getElementById('site_search_1_input').value+'&amp;depth=0';" style="width: 159px;" type="text"><div style="display: inline"><button onclick="window.location.href='search.html?site_search_results_1='+document.getElementById('site_search_1_input').value+'&amp;depth=0';" style="width: 71px;">Zoek</button></div>
-</form>
+
 <div style="position:absolute;left:120px;top:1520px;width:760px;height:20px;overflow:hidden;">
 <p class="Normal-P"><span class="Normal-C">Copyright © Stichting Van Motman Familie Archief. &nbsp;Alle rechten voorbehouden.</span></p>
 <p class="Motman-P-P0"><span class="Motman-C-C3"><br></span></p>
@@ -444,99 +503,82 @@ document.write( '<div style="position:absolute;left:20;top:250;width:979;height:
     <div id="btnstrp_1_2" style="position:absolute; left:24px; top:4px; width:16px; height:16px;">
     <a href="https://twitter.com/share?url=http%3A%2F%2Fwww.familievanmotman.nl"><img width="16" height="16" src="wpimages/wpfe6aa5af_01.png" border="0" title="Share on Twitter" alt="Share on Twitter"></a></div>
 </div> -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="paypal-button-container"></div>
+    </div>
+  
+  </div>
+
 <noscript><p style="position:absolute;left:740px;top:340px;width:200px;height:780px;">This web page requires a JavaScript enabled browser.</p></noscript>
 </div>
 
-<div id='product-component-1710598328421'></div>
-<script type="text/javascript">
-/*<![CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: '29e129-8b.myshopify.com',
-      storefrontAccessToken: '6a84281779f7c6b95c2f8f963279e700',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('product', {
-        id: '8808969339226',
-        node: document.getElementById('product-component-1710598328421'),
-        moneyFormat: '%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px"
+<div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AQN0DcBT29oAzJixStMGWMU8Ei4RsSbtnD9Wbg3BIjsQlH7M4pp9YtEDvOY_aZQ-1QrzfZ3XxtpOORz6&currency=EUR&disable-funding=sofort"></script>
+
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    var paypalButtonsRendered = false; // Flag to check if PayPal buttons have been rendered
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+        if (!paypalButtonsRendered) {
+            paypal.Buttons({
+            // fundingSource: paypal.FUNDING.IDEAL,
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '35' // The transaction amount
+                        }
+                    }],
+                    application_context: {
+                        shipping_preference: 'GET_FROM_FILE', // Prompt buyer to provide a shipping address
+                        payment_method: {
+                            payee_preferred: 'IMMEDIATE_PAYMENT_REQUIRED' // Make payment immediately
+                        }
+                    }
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    // Transaction completed
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    // You can also access the shipping details here
+                    // details.purchase_units[0].shipping.address
+                });
+            },
+            onClick: function(data) {
+                // Close the modal when any PayPal button is clicked
+                if (data.fundingSource !== paypal.FUNDING.CARD) {
+                    modal.style.display = "none";
+                }
+            }
+
+        }).render('#paypal-button-container');
+        paypalButtonsRendered = true;
         }
-      }
-    },
-    "buttonDestination": "checkout",
-    "text": {
-      "button": "Buy now"
     }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
-      }
     }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    }
-  },
-  "toggle": {}
-},
-      });
-    });
-  }
-})();
-/*]]>*/
 </script>
 
 </body>
