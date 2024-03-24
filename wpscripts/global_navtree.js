@@ -142,7 +142,7 @@ var global_navtree = WpNavBar.readTree({
         }]
     }]
 },
-{   'sTitle':' Locatie\'s',
+{   'sTitle':' Locaties',
     'sUrl':'/locations.html',"childArray" : [
     {   'sTitle':'Dramaga',
         'sUrl':'/location1.html'
