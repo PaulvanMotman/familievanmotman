@@ -1,191 +1,191 @@
 var global_navtree = WpNavBar.readTree({
 "childArray" : [
 {   'sTitle':'Home',
-    'sUrl':'/index.html'
+    'sUrl':'index.html'
 },
 {   'sTitle':'Stichting',
-    'sUrl':'/foundation.html',"childArray" : [
+    'sUrl':'foundation.html',"childArray" : [
     {   'sTitle':'Doelstellingen',
-        'sUrl':'/goals.html'
+        'sUrl':'goals.html'
     },
     {   'sTitle':'Bestuur',
-        'sUrl':'/board.html'
+        'sUrl':'board.html'
     },
     {   'sTitle':'Donateurschap',
-        'sUrl':'/funds.html'
+        'sUrl':'funds.html'
     },
     {   'sTitle':'Familieboek',
-        'sUrl':'/book.html'
+        'sUrl':'book.html'
     },
     {   'sTitle':'Nieuwsbrieven',
-        'sUrl':'/news.html',"childArray" : [
+        'sUrl':'news.html',"childArray" : [
         {   'sTitle':'Dramaga Kronieken',
-            'sUrl':'/news0.html'
+            'sUrl':'news0.html'
         },
         {   'sTitle':'December 2007',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Dec 2007.pdf',
+            'sUrl':'Kroniek Dec 2007.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'April 2008',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Apr 2008.pdf',
+            'sUrl':'Kroniek Apr 2008.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'Juni 2008',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Jun 2008.pdf',
+            'sUrl':'Kroniek Jun 2008.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'Maart 2009',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Mrt 2009.pdf',
+            'sUrl':'Kroniek Mrt 2009.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'September 2009',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Sep 2009.pdf',
+            'sUrl':'Kroniek Sep 2009.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'Februari 2010',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Feb 2010.pdf',
+            'sUrl':'Kroniek Feb 2010.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'November 2010',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Nov 2010.pdf',
+            'sUrl':'Kroniek Nov 2010.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'Februari 2011',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Feb 2011.pdf',
+            'sUrl':'Kroniek Feb 2011.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'December 2011',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Dec 2011.pdf',
+            'sUrl':'Kroniek Dec 2011.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'Maart 2012',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Mrt 2012.pdf',
+            'sUrl':'Kroniek Mrt 2012.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'December 2012',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Dec 2012.pdf',
+            'sUrl':'Kroniek Dec 2012.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'Maart 2013',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Mrt 2013.pdf',
+            'sUrl':'Kroniek Mrt 2013.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'December 2013',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Dec 2013.pdf',
+            'sUrl':'Kroniek Dec 2013.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'Februari 2014',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Mrt 2014.pdf',
+            'sUrl':'Kroniek Mrt 2014.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'November 2014',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Nov 2014.pdf',
+            'sUrl':'Kroniek Nov 2014.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'Maart 2015',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Mrt 2015.pdf',
+            'sUrl':'Kroniek Mrt 2015.pdf',
             'sTarget':'_blank'
         },
         {   'sTitle':'Januari 2016',
             'bIsExternal':true,
-            'sUrl':'/Kroniek Jan 2016.pdf',
+            'sUrl':'Kroniek Jan 2016.pdf',
             'sTarget':'_blank'
         }]
     }]
 },
 {   'sTitle':'Stamboom',
-    'sUrl':'/family.html',"childArray" : [
+    'sUrl':'family.html',"childArray" : [
     {   'sTitle':'Login',
-        'sUrl':'/tree.html'
+        'sUrl':'tree.html'
     },
     {   'sTitle':'Naam & Wapen',
-        'sUrl':'/name.html'
+        'sUrl':'name.html'
     },
     {   'sTitle':'Gerrit W. Casimir',
-        'sUrl':'/founder.html'
+        'sUrl':'founder.html'
     },
     {   'sTitle':'De Vijf Takken',
-        'sUrl':'/branches.html',"childArray" : [
+        'sUrl':'branches.html',"childArray" : [
         {   'sTitle':'De Vijf Takken',
-            'sUrl':'/branch0.html'
+            'sUrl':'branch0.html'
         },
         {   'sTitle':'Tak A: Willem',
-            'sUrl':'/branch1.html'
+            'sUrl':'branch1.html'
         },
         {   'sTitle':'Tak B: Frederik',
-            'sUrl':'/branch2.html'
+            'sUrl':'branch2.html'
         },
         {   'sTitle':' Tak C: Jacob',
-            'sUrl':'/branch3.html'
+            'sUrl':'branch3.html'
         },
         {   'sTitle':'Tak D: Jan',
-            'sUrl':'/branch4.html'
+            'sUrl':'branch4.html'
         },
         {   'sTitle':'Tak E: Pieter',
-            'sUrl':'/branch5.html'
+            'sUrl':'branch5.html'
         }]
     }]
 },
 {   'sTitle':' Locaties',
-    'sUrl':'/locations.html',"childArray" : [
+    'sUrl':'locations.html',"childArray" : [
     {   'sTitle':'Dramaga',
-        'sUrl':'/location1.html'
+        'sUrl':'location1.html'
     },
     {   'sTitle':'Familiegraf',
-        'sUrl':'/location2.html'
+        'sUrl':'location2.html'
     },
     {   'sTitle':'Tanahabang',
-        'sUrl':'/location3.html'
+        'sUrl':'location3.html'
     },
     {   'sTitle':'Van Motman Landen',
-        'sUrl':'/location4.html'
+        'sUrl':'location4.html'
     }]
 },
 {   'sTitle':'Foto\'s',
-    'sUrl':'/album.html',"childArray" : [
+    'sUrl':'album.html',"childArray" : [
     {   'sTitle':'Personen',
-        'sUrl':'/album1.html'
+        'sUrl':'album1.html'
     },
     {   'sTitle':'Kumpulans',
-        'sUrl':'/album3.html',"childArray" : [
+        'sUrl':'album3.html',"childArray" : [
         {   'sTitle':'De Kumpulans',
-            'sUrl':'/album3a.html'
+            'sUrl':'album3a.html'
         },
         {   'sTitle':'Kumpulan 2007',
-            'sUrl':'/album3b.html'
+            'sUrl':'album3b.html'
         },
         {   'sTitle':'Kumpulan 2008',
-            'sUrl':'/album3c.html'
+            'sUrl':'album3c.html'
         },
         {   'sTitle':'Kumpulan 2009',
-            'sUrl':'/album3d.html'
+            'sUrl':'album3d.html'
         },
         {   'sTitle':'Kumpulan 2010',
-            'sUrl':'/album3e.html'
+            'sUrl':'album3e.html'
         },
         {   'sTitle':'Kumpulan 2011',
-            'sUrl':'/album3f.html'
+            'sUrl':'album3f.html'
         }]
     }]
 },
 {   'sTitle':'Contact',
-    'sUrl':'/contact.html'
+    'sUrl':'contact.html'
 },
 {   'sTitle':'Facebook',
     'bIsExternal':true,
