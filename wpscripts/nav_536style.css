@@ -1,6 +1,6 @@
 div.nav_536style{overflow:visible;}
 .nav_536style, .nav_536style a, .nav_536style span{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
-.nav_536style span, .nav_536style a, .nav_536style a:link, .nav_536style a:visited, .nav_536style a:hover, .nav_536style a:active{background:#547054;color:#ffffff;font-family:Georgia,serif;font-size:14pt;font-weight:normal;text-decoration:none;text-align:left;font-variant:normal;text-transform:none;font-style:normal;letter-spacing:normal;padding:2px 21px;}
+.nav_536style span, .nav_536style a, .nav_536style a:link, .nav_536style a:visited, .nav_536style a:hover, .nav_536style a:active{background:#547054;color:#ffffff;font-family:Verdana,sans-serif;font-size:12pt;font-weight:normal;text-decoration:none;text-align:left;font-variant:normal;text-transform:none;font-style:normal;letter-spacing:normal;padding:2px 21px;}
 .nav_536style span{cursor:default;}
 .nav_536style a.open:link, .nav_536style a.open:visited, .nav_536style a.open:hover, .nav_536style a.open:active, .nav_536style span.open{padding:2px 21px;}
 .nav_536style :focus{outline:none;}
@@ -8,7 +8,7 @@ div.nav_536style{overflow:visible;}
 .nav_536style span.open, .nav_536style a.open, .nav_536style a.open:link, .nav_536style a.open:visited, .nav_536style a.open:hover, .nav_536style a.open:active{background-color:#7cac7c;color:#ffffff;}
 table.nav_536style_level1{padding:4px 0px;border-collapse:separate;border-spacing:0;}
 table.nav_536style_level1 :focus{outline:none;}
-.nav_536style_level1 span, .nav_536style_level1 a, .nav_536style_level1 a:link, .nav_536style_level1 a:visited, .nav_536style_level1 a:hover, .nav_536style_level1 a:active{background:#7cac7c;color:#ffffff;font-family:Georgia,serif;font-size:12pt;font-weight:normal;text-decoration:none;text-align:left;font-variant:normal;text-transform:none;font-style:normal;letter-spacing:normal;padding:2px 20px;}
+.nav_536style_level1 span, .nav_536style_level1 a, .nav_536style_level1 a:link, .nav_536style_level1 a:visited, .nav_536style_level1 a:hover, .nav_536style_level1 a:active{background:#7cac7c;color:#ffffff;font-family:Verdana,sans-serif;font-size:12pt;font-weight:normal;text-decoration:none;text-align:left;font-variant:normal;text-transform:none;font-style:normal;letter-spacing:normal;padding:2px 20px;}
 .nav_536style_level1 span.open, .nav_536style_level1 a.open:link, .nav_536style_level1 a.open:visited, .nav_536style_level1 a.open:hover, .nav_536style_level1 a.open:active{padding:2px 20px;}
 .nav_536style_level1 span{cursor:default;}
 .nav_536style_level1 span.hassubmenu_left, .nav_536style_level1 a.hassubmenu_left, .nav_536style_level1 a.hassubmenu_left:link, .nav_536style_level1 a.hassubmenu_left:visited, .nav_536style_level1 a.hassubmenu_left:hover, .nav_536style_level1 a.hassubmenu_left:active{background-image:url('../wpimages/wpd46ab9ef_01.gif');background-position:left center;background-attachment:scroll;background-repeat:no-repeat;}
