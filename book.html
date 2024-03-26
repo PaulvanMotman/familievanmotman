@@ -62,6 +62,33 @@
         font-size: 14px;
         line-height: 1.29em;
       }
+      #myBtn {
+        position: absolute;
+        top: 400px;
+        left: 0px;
+        width: 600px;
+        height: 40px; /* Adjusted for better visibility */
+        margin: 0;
+        padding: 0;
+        background-color: #4caf50; /* Material Design Purple */
+        color: #ffffff; /* White text color */
+        border: none;
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover */
+        font-size: 16px; /* Adjusted font size for better readability */
+        line-height: 40px; /* Center text vertically */
+        text-align: center; /* Center text horizontally */
+        font-family: "Verdana", sans-serif;
+        color: #ffffff;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+      #myBtn:hover {
+        background-color: #388e3c; /* Darker shade for hover effect */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+      }
     </style>
     <script type="text/javascript" src="wpscripts/jspngfix.js"></script>
     <link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css" />
@@ -353,8 +380,11 @@
         <p></p>
         <p class="Wp-Motman-P">
           <span class="Motman-C-C0"
-            >Wanneer u zich wilt verzekeren van een of meerdere exemplaren van dit boek, maak dan gebruik van het <a target="_blank" href="https://docs.google.com/forms/d/1eZgzROnWRP7Hp5rliCp9G5HGf5aZfnoIlbodsivvmyU/viewform?edit_requested=true" style="text-decoration: underline">het bestelformulier</a>.</span>
+            >Wanneer u zich wilt verzekeren van een of meerdere exemplaren van dit boek, maak dan gebruik van het het bestelformulier hieronder.</span>
         </p>
+        <a id="myBtn" href="https://docs.google.com/forms/d/e/1FAIpQLSdGdG1R1DzXc7NK8EMMfqCzBei45mdPI0vAOqBn9r-v7xvbVA/viewform" target="_blank">
+          Bestel het boek
+      </a>
       </div>
       <img
         src="wpimages/wp88441e0d_05_01.jpg"

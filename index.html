@@ -115,39 +115,6 @@
         line-height: 1.45em;
       }
 
-      /* Simple styling for the modal */
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-        padding-top: 60px;
-      }
-      .modal-content {
-        background-color: #fefefe;
-        margin: 5% auto; /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #888;
-        width: 50%; /* Could be more or less, depending on screen size */
-      }
-      .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-      }
-      .close:hover,
-      .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-      }
       #myBtn {
         position: absolute;
         top: 950px;
@@ -165,111 +132,17 @@
         font-size: 16px; /* Adjusted font size for better readability */
         line-height: 40px; /* Center text vertically */
         text-align: center; /* Center text horizontally */
+        font-family: "Verdana", sans-serif;
+        color: #ffffff;
+        font-size: 14px;
+        text-decoration: none;
       }
 
       #myBtn:hover {
         background-color: #388e3c; /* Darker shade for hover effect */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
       }
-
-      /* Modal title and radio buttons */
-
-      .title {
-        font-size: 24px;
-        font-weight: 500;
-        color: #333;
-        margin-bottom: 8px;
-        font-family: "Roboto", sans-serif;
-      }
-
-      .container {
-        display: flex;
-        flex-direction: row;
-        max-width: 100%;
-        margin: 20px auto;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        font-family: "Roboto", sans-serif;
-      }
-
-      .subtext {
-        font-size: 16px;
-        color: #666;
-        margin-bottom: 20px;
-        font-family: "Roboto", sans-serif;
-      }
-
-      .option-container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 0 10px;
-      }
-
-      .option {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 18px;
-        user-select: none;
-      }
-
-      .option input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-      }
-
-      .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-        border-radius: 50%;
-      }
-
-      .option:hover input ~ .checkmark {
-        background-color: #ccc;
-      }
-
-      .option input:checked ~ .checkmark {
-        background-color: #4caf50;
-      }
-
-      .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-      }
-
-      .option input:checked ~ .checkmark:after {
-        display: block;
-      }
-
-      .option .checkmark:after {
-        top: 9px;
-        left: 9px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: white;
-      }
-
-      .info-text {
-        margin-left: 35px;
-        font-size: 14px;
-        color: #666;
-      }
-
-      .info-text strong {
-        color: #333;
-      }
+      
     </style>
     <script type="text/javascript" src="wpscripts/jspngfix.js"></script>
     <link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css" />
@@ -587,9 +460,9 @@
 <div style="position:absolute;left:40px;top:740px;width:140px;height:20px;overflow:hidden;">
 </div>
 
-<button id="myBtn">
+<a id="myBtn" href="https://docs.google.com/forms/d/e/1FAIpQLSdGdG1R1DzXc7NK8EMMfqCzBei45mdPI0vAOqBn9r-v7xvbVA/viewform" target="_blank">
     Bestel het boek
-</button>
+</a>
 
 <div style="position:absolute;left:120px;top:1470px;width:760px;height:20px;overflow:hidden;">
 <p class="Normal-P"><span class="Normal-C">Copyright © Stichting Van Motman Familie Archief. &nbsp;Alle rechten voorbehouden.</span></p>
@@ -637,49 +510,6 @@
       style="position: absolute; left: 500px; top: 580px"
     />
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="title">Kies uw leveringsoptie</div>
-        <div class="subtext">Selecteer een optie die het beste bij u past</div>
-
-        <div class="container">
-          <div class="option-container">
-            <label class="option"
-              >Zelf ophalen
-              <input
-                type="radio"
-                name="deliveryOption"
-                value="pickup"
-                id="deliveryOptionPickup"
-              />
-              <span class="checkmark"></span>
-            </label>
-            <div class="info-text">
-              <strong>Prijs</strong> €35<br />
-              <strong>Waar</strong> de Kumpulan<br />
-              <strong>Wanneer</strong> zondag 9 juni
-            </div>
-          </div>
-
-          <div class="option-container">
-            <label class="option"
-              >Verzenden
-              <input type="radio" name="deliveryOption" value="delivery" />
-              <span class="checkmark"></span>
-            </label>
-            <div class="info-text">
-              <strong>Prijs:</strong> €39,99<br />
-              <strong>Beschikbaar vanaf:</strong> zondag 9 juni
-            </div>
-          </div>
-        </div>
-        <div id="paypal-button-container"></div>
-      </div>
-    </div>
-
     <noscript
       ><p
         style="
@@ -694,88 +524,6 @@
       </p></noscript
     >
 
-    <div id="paypal-button-container"></div>
-    <script src="https://www.paypal.com/sdk/js?client-id=AQN0DcBT29oAzJixStMGWMU8Ei4RsSbtnD9Wbg3BIjsQlH7M4pp9YtEDvOY_aZQ-1QrzfZ3XxtpOORz6&currency=EUR&disable-funding=sofort"></script>
-
-    <script>
-      var modal = document.getElementById("myModal");
-      var btn = document.getElementById("myBtn");
-      var span = document.getElementsByClassName("close")[0];
-
-      document
-        .querySelectorAll('input[name="deliveryOption"]')
-        .forEach((input) => {
-          input.addEventListener("change", function (event) {
-            let shippingPreference =
-              event.target.value === "pickup" ? "NO_SHIPPING" : "GET_FROM_FILE";
-
-            // Ensure PayPal buttons container is empty before re-rendering
-            document.getElementById("paypal-button-container").innerHTML = "";
-
-            paypal
-              .Buttons({
-                // fundingSource: paypal.FUNDING.IDEAL,
-                createOrder: function (data, actions) {
-                  return actions.order.create({
-                    purchase_units: [
-                      {
-                        amount: {
-                          value:
-                            event.target.value === "pickup" ? "35" : "39.99", // The transaction amount
-                        },
-                      },
-                    ],
-                    application_context: {
-                      shipping_preference: shippingPreference,
-                      payment_method: {
-                        payee_preferred: "IMMEDIATE_PAYMENT_REQUIRED", // Make payment immediately
-                      },
-                    },
-                  });
-                },
-                onApprove: function (data, actions) {
-                  return actions.order.capture().then(function (details) {
-                    // Transaction completed
-                    alert(
-                      "Transaction completed by " +
-                        details.payer.name.given_name +
-                        "!"
-                    );
-                    // You can also access the shipping details here
-                    // details.purchase_units[0].shipping.address
-                  });
-                },
-                onClick: function (data) {
-                  // Close the modal when any PayPal button is clicked
-                  if (data.fundingSource !== paypal.FUNDING.CARD) {
-                    modal.style.display = "none";
-                  }
-                },
-              })
-              .render("#paypal-button-container");
-          });
-        });
-
-      // When the user clicks the button, open the modal
-      btn.onclick = function () {
-        modal.style.display = "block";
-        var pickupOption = document.getElementById("deliveryOptionPickup");
-        pickupOption.checked = true;
-        pickupOption.dispatchEvent(new Event("change"));
-      };
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
-    </script>
     <script src="wpscripts/translate.js"></script>
   </body>
 </html>
