@@ -111,7 +111,7 @@ var global_navtree = WpNavBar.readTree({
 },
 {   'sTitle':'Stamboom',
     'sUrl':'family.html',"childArray" : [
-    {   'sTitle':'Login',
+    {   'sTitle':'Overzicht',
         'sUrl':'tree.html'
     },
     {   'sTitle':'Naam & Wapen',
@@ -187,9 +187,8 @@ var global_navtree = WpNavBar.readTree({
 {   'sTitle':'Contact',
     'sUrl':'contact.html'
 },
-{   'sTitle':'Facebook',
-    'bIsExternal':true,
-    'sUrl':'https://www.facebook.com/vanmotman',
-    'sTarget':'_blank'
+{   'sTitle':'',
+    'bIsExternal':false,
+    'sUrl':'/',
 }]
 });

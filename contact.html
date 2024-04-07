@@ -551,5 +551,14 @@
       />
     </div>
     <script src="wpscripts/translate.js"></script>
+    <script>
+      var element = document.getElementById("nav_536_I6");
+      element.classList.add("disabled");
+      element.addEventListener("click", function(event) {
+          event.preventDefault();  
+          event.stopPropagation(); 
+      }, true);
+      element.removeAttribute('href');
+    </script>
   </body>
 </html>
