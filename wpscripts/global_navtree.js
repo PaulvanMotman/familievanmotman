@@ -125,19 +125,19 @@ var global_navtree = WpNavBar.readTree({
         {   'sTitle':'De Vijf Takken',
             'sUrl':'branch0.html'
         },
-        {   'sTitle':'Tak A: Willem',
+        {   'sTitle':'Tak A: Willem Reinier',
             'sUrl':'branch1.html'
         },
-        {   'sTitle':'Tak B: Frederik',
+        {   'sTitle':'Tak B: Frederik H.C.',
             'sUrl':'branch2.html'
         },
-        {   'sTitle':' Tak C: Jacob',
+        {   'sTitle':' Tak C: Jacob Gerrit Th.',
             'sUrl':'branch3.html'
         },
-        {   'sTitle':'Tak D: Jan',
+        {   'sTitle':'Tak D: Jan Casimir Th.',
             'sUrl':'branch4.html'
         },
-        {   'sTitle':'Tak E: Pieter',
+        {   'sTitle':'Tak E: Pieter Cornelis',
             'sUrl':'branch5.html'
         }]
     }]
