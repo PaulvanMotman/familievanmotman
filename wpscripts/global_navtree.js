@@ -117,6 +117,9 @@ var global_navtree = WpNavBar.readTree({
     {   'sTitle':'Naam & Wapen',
         'sUrl':'name.html'
     },
+    {   'sTitle':'Gerrit Willem van Motman',
+        'sUrl':'uncle.html'
+    },
     {   'sTitle':'Gerrit W. Casimir',
         'sUrl':'founder.html'
     },
