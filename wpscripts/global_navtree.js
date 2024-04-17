@@ -120,7 +120,7 @@ var global_navtree = WpNavBar.readTree({
     {   'sTitle':'Gerrit Willem van Motman',
         'sUrl':'uncle.html'
     },
-    {   'sTitle':'Gerrit W. Casimir',
+    {   'sTitle':'Gerrit Willem Casimir',
         'sUrl':'founder.html'
     },
     {   'sTitle':'De Vijf Takken',
